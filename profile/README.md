@@ -1,4 +1,4 @@
-# ✨[Stankick/Stankick](Stankick/Stankick)✨
+# ✨[Stankick](Stankick)✨
 
 
 ## Table of [/Content](/.content)
