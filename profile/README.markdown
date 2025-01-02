@@ -1,4 +1,4 @@
-✨[Stankick/Stankick](Stankick/Stankick)✨
+# ✨[Stankick/Stankick](Stankick/Stankick)✨
 
 ## Table of 
     [/Content](/.content)
@@ -26,4 +26,27 @@
     - 😄 Pronouns: ...
 
     - ⚡ Fun fact: ...
+
+###  Welcome To The Repo-house
+
+
+    * stankick.ghes.us 'Enterprise' [!x]
+
+  ## Table Of Content
+
+  - * [Code of Content](Stankick/.CodeofContent)('Code of Conduct')
+ 
+  - * [stankick/docs/index.md](stankick/docs/index.html) 
+    
+  - * /.ts [typescript](stankick.ts)
+    
+  - * /.rb [ruby](stankick.rb)
+    
+  - * /.git [git](stankick.git)
+ 
+  - * /.github [github](stankick.github.io)
+    
+  - * /.gitignore [git-ignore](stankick.git-inore)
+ 
+     
 
