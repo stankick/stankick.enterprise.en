@@ -1,19 +1,19 @@
 # ✨[Stankick/Stankick](Stankick/Stankick)✨
 
-## Table of 
-    [/Content](/.content)
-      - [/docs](/.docs)
+
+## Table of [/Content](/.content)
+ - [/docs](/.docs)
       [docs/README.md](docs/README.md)
-      - [/src](/.src)
+ - [/src](/.src)
       [src/README.md](src/README.md)
-      - [/data](/.data)
+ - [/data](/.data)
       [data/README.md](data/README.md)
-      - [/stankick](/.stankick)
-      - [/license](License)
+- [/stankick](/.stankick)
+- [/license](License)
       - [/enterprise](stankick.ghes)
 
 
-    # - [!👋](stankick/stankick) 
+    [!👋](stankick/stankick) 
     
     - 👀 I’m interested in ...
 
@@ -32,7 +32,7 @@
 
     * stankick.ghes.us 'Enterprise' [!x]
 
-  ## Table Of Content
+
 
   - * [Code of Content](Stankick/.CodeofContent)('Code of Conduct')
  
