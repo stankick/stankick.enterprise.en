@@ -1,3 +1,38 @@
+# Xcode Build and Analyze Workflow Action
+
+# Input Parameters:
+#   - scheme: The name of the scheme to build and analyze (optional)
+#   - configuration: The build configuration to use (e.g. "Debug", "Release") (optional)
+#   - xcodebuild_path: The path to the xcodebuild command (optional)
+
+# Output Parameters:
+#   - build_result: The result of the build (e.g. "success", "failure")
+#   - analysis_result: The result of the analysis (e.g. "success", "failure")
+
+actions:
+  - name: Build and Analyze
+    uses: xcodebuild
+    with:
+      args: "-scheme ${scheme} -configuration ${configuration} analyze"
+    env:
+      XCODEBUILD_PATH: "${xcodebuild_path}"
+
+  - name: Get Build Result
+    run: |
+      build_result=$(xcodebuild -scheme ${scheme} -configuration ${configuration} -showBuildSettings | grep "BUILD_SUCCEEDED" | awk '{print $2}')
+      echo "build_result=${build_result}" >> $GITHUB_ENV
+
+  - name: Get Analysis Result
+    run: |
+      analysis_result=$(xcodebuild -scheme ${scheme} -configuration ${configuration} analyze | grep "Analysis Succeeded" | awk '{print $3}')
+      echo "analysis_result=${analysis_result}" >> $GITHUB_ENV
+```
+This script uses the `xcodebuild` command to build and analyze the default scheme. It also extracts the build and analysis results and stores them as output parameters.
+
+You can customize this script to fit your specific needs, such as changing the scheme or configuration used for the build and analysis.
+
+Note: This script assumes that you are using GitHub Actions to run the workflow. If you are using a different CI/CD platform, you may need to modify the script accordingly.
+
 name: Xcode - Build and Analyze
 
 on:
@@ -9,7 +44,8 @@ on:
 jobs:
   build:
     name: Build and analyse default scheme using xcodebuild command
-    runs-on: macos-latest
+    runs-on: self-hosted 
+             macos-latest
 
     steps:
       - name: Checkout
